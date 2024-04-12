@@ -41,7 +41,7 @@ def hello():
         'index.html',
         option_a=option_a,
         option_b=option_b,
-        option_c=option_c
+        option_c=option_c,
         hostname=hostname,
         vote=vote,
     ))
