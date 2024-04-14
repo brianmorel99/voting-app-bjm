@@ -3,6 +3,9 @@ var socket = io.connect();
 
 var bg1 = document.getElementById('background-stats-1');
 var bg2 = document.getElementById('background-stats-2');
+var bg3 = document.getElementById('background-stats-3');
+
+var piechart = document.getElementById('myChart');
 
 app.controller('statsCtrl', function($scope){
   $scope.aPercent = 33;
@@ -11,23 +14,22 @@ app.controller('statsCtrl', function($scope){
 
   var updateScores = function(){
     socket.on('scores', function (json) {
-       data = JSON.parse(json);
-       var a = parseInt(data.a || 0);
-       var b = parseInt(data.b || 0);
-       var c = parseInt(data.c || 0);
-
-       var percentages = getPercentages(a, b, c);
-
-       bg1.style.width = percentages.a + "%";
-       bg2.style.width = percentages.b + "%";
-       bg2.style.width = percentages.c + "%";
-
-       $scope.$apply(function () {
-         $scope.aPercent = percentages.a;
-         $scope.bPercent = percentages.b;
-         $scope.cPercent = percentages.c;
-         $scope.total = a + b + c;
-       });
+      data = JSON.parse(json);
+      var a = parseInt(data.a || 0);
+      var b = parseInt(data.b || 0);
+      var c = parseInt(data.c || 0);
+      var percentages = getPercentages(a, b, c);
+      
+      bg1.style.width = percentages.a + "%";
+      bg2.style.width = percentages.b + "%";
+      bg3.style.width = percentages.c + "%";
+      
+      $scope.$apply(function () {
+        $scope.aPercent = percentages.a;
+        $scope.bPercent = percentages.b;
+        $scope.cPercent = percentages.c;
+        $scope.total = a + b + c;
+      });
     });
   };
 

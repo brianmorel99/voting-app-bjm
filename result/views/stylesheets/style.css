@@ -8,6 +8,7 @@ html,body{
   padding:0;
   height:100%;
   font-family: 'Open Sans';
+  min-height: 300px;
 }
 body{
   opacity:0;
@@ -19,9 +20,7 @@ body{
   width:2px;
   background-color: #C0C9CE;
   position: relative;
-  top: 50%;
   float: left;
-  transform: translateY(-50%);
 }
 
 #background-stats-1{
@@ -32,19 +31,23 @@ body{
   background-color: #00cbca;
 }
 
+#background-stats-3{
+  background-color: #42c67e;
+}
+
 #content-container{
   z-index:2;
   position:relative;
-  margin:0 auto;
   display:table;
-  padding:10px;
-  max-width:940px;
   height:100%;
+  width:100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 #content-container-center{
-  display:table-cell;
+  display:flex;
   text-align:center;
-  vertical-align:middle;
+  height:100%;
 }
 #result{
   z-index: 3;
@@ -61,11 +64,15 @@ body{
   line-height:1.3em;
   background:#fff;
   box-shadow: 10px 0 0 #fff, -10px 0 0 #fff;
-  vertical-align:middle;
+  align-items: center;
   font-size:40px;
   font-weight: 600;
-  width: 450px;
-  height: 200px;
+  width: 100%;
+  min-width: 400px;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
 }
 #choice a{
   text-decoration:none;
@@ -76,26 +83,29 @@ body{
 }
 
 #choice .choice{
-  width: 49%;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: left;
-  padding-left: 50px;
+  text-align: center;
+  align-items: center;
 }
 
 #choice .choice .label{
   text-transform: uppercase;
 }
 
-#choice .choice.dogs{
-  color: #00cbca;
-  float: right;
-}
-
-#choice .choice.cats{
+#choice .choice.a{
   color: #2196f3;
   float: left;
+  width: 33%;
+}
+
+#choice .choice.b{
+  color: #00cbca;
+  width: 33%;
+}
+#choice .choice.c{
+  color: #42c67e;
+  float: right;
+  width: 33%;
 }
 #background-stats{
   z-index:1;
@@ -107,6 +117,6 @@ body{
   transition: width 400ms ease-in-out;
   display:inline-block;
   margin-bottom:-4px;
-  width:50%;
+  width:33%;
   height:100%;
 }
