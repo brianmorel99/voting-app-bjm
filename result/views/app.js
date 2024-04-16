@@ -6,6 +6,7 @@ var bg2 = document.getElementById('background-stats-2');
 var bg3 = document.getElementById('background-stats-3');
 
 var piechart = document.getElementById('myChart');
+var theChart
 
 app.controller('statsCtrl', function($scope){
   $scope.aPercent = 33;
@@ -24,18 +25,22 @@ app.controller('statsCtrl', function($scope){
       bg2.style.width = percentages.b + "%";
       bg3.style.width = percentages.c + "%";
 
-      piechart.destroy;
-      new Chart(piechart, {
-        type: 'pie',
-        data: {
-          labels: ['Arsenal', 'Liverpool', 'Manchester City'],
-          datasets: [{
-            label: 'Results',
-            data: [percentages.a, percentages.b, percentages.c],
-            borderWidth: 1
-          }]
-        }
-      });
+      if(theChart) {
+        theChart.data.datasets[0].data = [percentages.a, percentages.b, percentages.c]
+        theChart.update()
+      }
+      else
+        theChart = new Chart(piechart, {
+          type: 'pie',
+          data: {
+            labels: ['Arsenal', 'Liverpool', 'Manchester City'],
+            datasets: [{
+              label: 'Results',
+              data: [percentages.a, percentages.b, percentages.c],
+              borderWidth: 1
+            }]
+          }
+        });
       
       $scope.$apply(function () {
         $scope.aPercent = percentages.a;
