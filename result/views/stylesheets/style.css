@@ -49,11 +49,17 @@ body{
   text-align:center;
   height:100%;
 }
+#result-container{
+  display:flex;
+  text-align:center;
+  height:100%;
+}
 #result{
   z-index: 3;
-  position: absolute;
-  bottom: 40px;
-  right: 20px;
+  position: relative;
+  text-align:center;
+  top: 40px;
+  left: 40px;
   color: #fff;
   opacity: 0.5;
   font-size: 45px;

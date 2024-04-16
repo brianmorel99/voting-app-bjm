@@ -37,37 +37,21 @@
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <canvas id="myChart"></canvas>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script>
-      const ctx = document.getElementById('myChart');
-    
-      new Chart(ctx, {
-        type: 'pie',
-        data: {
-          labels: ['Red', 'Blue', 'Yellow'],
-          datasets: [{
-            label: 'Results',
-            data: [.33, .33, .33],
-            borderWidth: 1
-          }]
-        }
-      });
-    </script>
-     
-    <div id="result">
-      <span ng-if="total == 0">No votes yet</span>
-      <span ng-if="total == 1">{{total}} vote</span>
-      <span ng-if="total >= 2">{{total}} votes</span>
+      <div id="result-container">
+        <div id="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div id="result">
+          <span ng-if="total == 0">No votes yet</span>
+          <span ng-if="total == 1">{{total}} vote</span>
+          <span ng-if="total >= 2">{{total}} votes</span>
+        </div>
+      </div>
     </div>
     <script src="socket.io.js"></script>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   </body>
 </html>

@@ -23,6 +23,19 @@ app.controller('statsCtrl', function($scope){
       bg1.style.width = percentages.a + "%";
       bg2.style.width = percentages.b + "%";
       bg3.style.width = percentages.c + "%";
+
+      piechart.destroy;
+      new Chart(piechart, {
+        type: 'pie',
+        data: {
+          labels: ['Arsenal', 'Liverpool', 'Manchester City'],
+          datasets: [{
+            label: 'Results',
+            data: [percentages.a, percentages.b, percentages.c],
+            borderWidth: 1
+          }]
+        }
+      });
       
       $scope.$apply(function () {
         $scope.aPercent = percentages.a;
