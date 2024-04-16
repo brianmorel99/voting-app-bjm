@@ -37,6 +37,11 @@ app.controller('statsCtrl', function($scope){
             datasets: [{
               label: 'Results',
               data: [percentages.a, percentages.b, percentages.c],
+              backgroundColor: [
+                'rgb(219, 0, 7)',
+                'rgb(200, 16, 46)',
+                'rgb(108, 171, 221)'
+              ],
               borderWidth: 1
             }]
           }

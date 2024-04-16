@@ -24,15 +24,15 @@ body{
 }
 
 #background-stats-1{
-  background-color: #2196f3;
+  background-color: #EF0107;
 }
 
 #background-stats-2{
-  background-color: #00cbca;
+  background-color: #C8102E;
 }
 
 #background-stats-3{
-  background-color: #42c67e;
+  background-color: #6CABDD;
 }
 
 #content-container{
@@ -99,17 +99,17 @@ body{
 }
 
 #choice .choice.a{
-  color: #2196f3;
+  color: #EF0107;
   float: left;
   width: 33%;
 }
 
 #choice .choice.b{
-  color: #00cbca;
+  color: #C8102E;
   width: 33%;
 }
 #choice .choice.c{
-  color: #42c67e;
+  color: #6CABDD;
   float: right;
   width: 33%;
 }
