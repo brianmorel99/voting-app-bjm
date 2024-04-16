@@ -28,15 +28,15 @@ button i{
 }
 
 button.a{
-  background-color: #1aaaf8;
+  background-color: #EF0107;
 }
 
 button.b{
-  background-color: #00cbca;
+  background-color: #C8102E;
 }
 
 button.c{
-  background-color: #5af17b;
+  background-color: #6CABDD;
 }
 
 #choice-form{
@@ -119,27 +119,27 @@ button.c{
 }
 
 #choice button.a:hover{
-  background-color: #1488c6;
+  background-color: #063672;
 }
 
 #choice button.b:hover{
-  background-color: #00a2a1;
+  background-color: #00B2A9;
 }
 
 #choice button.c:hover{
-  background-color: #49c263;
+  background-color: #1C2C5B;
 }
 
 #choice button.a:focus{
-  background-color: #1488c6;
+  background-color: #063672;
 }
 
 #choice button.b:focus{
-  background-color: #00a2a1;
+  background-color: #00B2A9;
 }
 
 #choice button.c:focus{
-  background-color: #49c263;
+  background-color: #1C2C5B;
 }
 
 #background-stats{
