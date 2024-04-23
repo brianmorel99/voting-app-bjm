@@ -44,13 +44,17 @@ app.controller('statsCtrl', function($scope){
               ],
               borderWidth: 1
             }]
-          }
+          },
+          
         });
       
       $scope.$apply(function () {
         $scope.aPercent = percentages.a;
         $scope.bPercent = percentages.b;
         $scope.cPercent = percentages.c;
+        $scope.aTotal = a;
+        $scope.bTotal = b;
+        $scope.cTotal = c;
         $scope.total = a + b + c;
       });
     });
