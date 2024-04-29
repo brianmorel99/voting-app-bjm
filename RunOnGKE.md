@@ -32,11 +32,31 @@ gcloud container clusters get-credentials voting-app --location us-central1
 ```
 git clone https://github.com/brianmorel99/voting-app-bjm.git
 ```
-4. Deploy the app to the cluster
+4. Change into the project directory
+```
+cd voting-app-bjm
+```
+5. Deploy the app to the cluster
 ```
  kubectl create -f k8s-specifications/
 ```
-5. It may take some time to deploy and start the containers.  Run the below command until you see the "External IP" display for both the vote and result container.
+6. It may take some time to deploy and start the containers.  Run the below command until you see the "External IP" display for both the vote and result container.
 ```
 kubectl get services
 ```
+
+### In a Web Browser
+1. Open a new tab or window and navigate to the IP address of the vote app
+```
+http://IP_VOTE_APP
+```
+2. Open a new tab or window and navigate to the IP address of the result app
+```
+http://IP_RESULT_APP
+```
+* Any issues, make sure you are using http and not https
+3. If both pages are displaying as expected, return to Cloud Shell
+
+### Back in Cloud Shell
+
+
