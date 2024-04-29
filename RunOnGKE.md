@@ -4,7 +4,7 @@
 
 https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster
 
-For any issues with the below, please reference that page.
+* For any issues with the below, please reference that page.
 
 ### First Steps
 
@@ -19,6 +19,7 @@ For any issues with the below, please reference that page.
 gcloud config set project PROJECT_ID
 ```
 Replace PROJECT_ID with your project ID.
+!(/docs/images/cloud-1.png)
 
 1. Create cluster
 ```
