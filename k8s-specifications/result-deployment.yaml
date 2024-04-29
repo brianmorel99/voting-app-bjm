@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - image: brianmorel99/bjmvotingapp_result:latest
+        imagePullPolicy: Always
         name: result
         ports:
         - containerPort: 80
