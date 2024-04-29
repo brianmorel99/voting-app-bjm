@@ -45,6 +45,7 @@ table{
   z-index:2;
   position:relative;
   display:table;
+  height:100%;
   width:100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -52,7 +53,6 @@ table{
 #content-container-center{
   display:flex;
   text-align:center;
-  height:100%;
 }
 #result-container{
   display:flex;
