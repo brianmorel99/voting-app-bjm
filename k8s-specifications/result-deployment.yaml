@@ -15,7 +15,7 @@ spec:
         app: result
     spec:
       containers:
-      - image: brianmorel99/bjmvotingapp_result
+      - image: brianmorel99/bjmvotingapp_result:latest
         name: result
         ports:
         - containerPort: 80
