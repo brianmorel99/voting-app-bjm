@@ -20,38 +20,38 @@ https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster
 gcloud config set project PROJECT_ID
 ```
 Replace PROJECT_ID with your project ID.
-![](docs/images/cloud-1.png)
+![Screenshot](docs/images/cloud-1.PNG)
 
 2. Create cluster
 ```
 gcloud container clusters create-auto voting-app --location=us-central1
 ```
-![](docs/images/cloud-2.png)
+![Screenshot](/docs/images/cloud-2.png)
 2. Get the configuration for kubectl and credentials to access cluster
 ```
 gcloud container clusters get-credentials voting-app --location us-central1
 ```
-![](docs/images/cloud-3.png)
+![Screenshot](/docs/images/cloud-3.png)
 3. Clone the git repository with the voting-app project
 ```
 git clone https://github.com/brianmorel99/voting-app-bjm.git
 ```
-![](docs/images/cloud-4.png)
+![Screenshot]/(docs/images/cloud-4.png)
 4. Change into the project directory
 ```
 cd voting-app-bjm
 ```
-![](docs/images/cloud-5.png)
+![Screenshot](/docs/images/cloud-5.png)
 5. Deploy the app to the cluster
 ```
  kubectl create -f k8s-specifications/
 ```
-![](docs/images/cloud-6.png)
+![Screenshot](/docs/images/cloud-6.png)
 6. It may take some time to deploy and start the containers.  Run the below command until you see the "External IP" display for both the vote and result container.
 ```
 kubectl get services
 ```
-![](docs/images/cloud-7.png)
+![Screenshot](/docs/images/cloud-7.png)
 
 ### In a Web Browser
 1. Open a new tab or window and navigate to the IP address of the vote app
