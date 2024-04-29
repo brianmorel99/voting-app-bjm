@@ -47,7 +47,7 @@ gcloud container clusters get-credentials voting-app --location us-central1
 git clone https://github.com/brianmorel99/voting-app-bjm.git
 ```
 
-![Screenshot]/(docs/images/cloud-4.PNG)
+![Screenshot](/docs/images/cloud-4.PNG)
 
 4. Change into the project directory
 
