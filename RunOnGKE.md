@@ -58,5 +58,17 @@ http://IP_RESULT_APP
 3. If both pages are displaying as expected, return to Cloud Shell
 
 ### Back in Cloud Shell
+1. Install a package to help run the seed data
+```
+sudo apt install apache2-utils
+```
+2. Change into the seed-data directory
+```
+cd seed-data
+```
+2. Run the below command, and type in the Vote IP address when prompted
+```
+./generate-votes.sh
+```
 
 
